@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  color: #d3d3d3;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  /* background-color: #DE4D86; */
+  background: url(bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+  height: 100%;
+  width: 100%;
+}
+
+.clock {
+  display: flex;
+}
+
+.clock div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+
+  /* background: #F29CA3; */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.clock div span {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.title {
+  font-family: Engagement;
+  font-weight: 650;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-size: 48px;
+  text-align: center;
+}
+
+.small-msg {
+  width: 50%;
+  font-family: "Rouge Script";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+@media (max-width: 425px) {
+  .small-msg {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .clock div {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .clock div span {
+    font-size: 24px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .small-msg {
+    width: 80%;
+  }
+}
+
+.title, p, span{
+  text-shadow:
+    -1px -1px 0 #000,  /* Top-left shadow */
+     1px -1px 0 #000,  /* Top-right shadow */
+    -1px  1px 0 #000,  /* Bottom-left shadow */
+     1px  1px 0 #000;  /* Bottom-right shadow */
+}
